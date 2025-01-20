@@ -15,7 +15,7 @@ const ImageCard: React.FC<ImageCardProps> = ({ src, alt }) => {
 };
 
 type ImageSliderProps = {
-  files: File[]; // Input is now a list of files passed as prop
+  files: string[]; // Input is now a list of files passed as prop
 };
 
 
