@@ -70,26 +70,25 @@ export const DockCard = ({ children, title, url, active }: DockCardProps) => {
     window.location.href = url
   }
 
-  // Trigger the animation when the route is active
   React.useEffect(() => {
     if (active) {
-      opacity.start(0.5)
-      size.start(72)
+      opacity.start(0.5);
+      size.start(72);
       y.start(-INITIAL_WIDTH / 2, {
         loop: () => {
           if (3 === timesLooped.current++) {
-            timeoutRef.current = setTimeout(() => {
-              opacity.start(0)
-              y.set(0)
-              timeoutRef.current = undefined
-            }, 2000)
-            y.stop()
+            timeoutRef.current = window.setTimeout(() => {
+              opacity.start(0);
+              y.set(0);
+              timeoutRef.current = undefined;
+            }, 2000);
+            y.stop();
           }
-          return { reverse: true }
+          return { reverse: true };
         },
-      })
+      });
     }
-  }, [active])
+  }, [active]);
 
   React.useEffect(() => () => clearTimeout(timeoutRef.current), [])
 
