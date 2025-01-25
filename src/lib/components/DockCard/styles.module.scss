@@ -1,0 +1,53 @@
+.dock-card {
+  border-radius: 12px;
+  border: solid 1px rgba(38, 38, 38, 0.1);
+  background-color: rgb(255, 255, 255);
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+  box-shadow: 0 6px 6px rgba(184, 184, 184, 0.15); /* Add a small shadow */
+  
+
+  &:hover {
+    filter: saturate(1.05) brightness(1.05);
+  }
+}
+
+.dock-card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  position:relative;
+}
+
+.dock-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #262626;
+}
+
+.dock-card-title {
+  position: absolute;
+  top: -45px;  /* Adjust position based on your preference */
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  pointer-events: none;  /* Prevent interfering with button actions */
+  transition: opacity 0.3s ease;
+}
+
+.dock-card-title-text {
+  font-size: 14px;
+  color: #262626;
+  background-color: #f5f5f5;
+  padding: 8px;
+  border-radius: 8px;
+  white-space: nowrap;  /* Prevent the text from wrapping */
+  display: inline-block;  /* Make the element expand based on content width */
+}
+
+.dock-card-container:hover .dock-card-title {
+  opacity: 1;  /* Title becomes visible on hover */
+}
