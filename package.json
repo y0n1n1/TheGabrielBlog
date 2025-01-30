@@ -18,6 +18,7 @@
     "@types/react-router-dom": "^5.3.3",
     "@types/react-syntax-highlighter": "^15.5.13",
     "@use-gesture/react": "^10.3.1",
+    "@vercel/analytics": "^1.4.1",
     "chart.js": "^4.4.7",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
