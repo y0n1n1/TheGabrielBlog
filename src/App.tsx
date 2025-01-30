@@ -18,11 +18,13 @@ import Notebooks from './main/pages/Notebooks';
 import AboutMe from './main/pages/AboutMe';
 import Contact from './main/pages/Contact';
 import Projects from './main/pages/Projects';
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   
   return (
     <main className=''>
+      <Analytics/>
             <Routes>
                 <Route element={<MainLayout/>}>
                     <Route path="/articles" element={<Articles/>} />
